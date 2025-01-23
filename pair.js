@@ -20,13 +20,13 @@ function removeFile(FilePath){
 router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
-        async function FREDI_TECH_PAIR_CODE() {
+        async function NJABULO_Jb_PAIR_CODE() {
         const {
             state,
             saveCreds
         } = await useMultiFileAuthState('./temp/'+id)
      try {
-            let Pair_Code_By_Fredie_Tech = Fredie_Tech({
+            let Pair_Code_By_Njabulo_Tech = Njabulo_Tech({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
@@ -35,16 +35,16 @@ router.get('/', async (req, res) => {
                 logger: pino({level: "fatal"}).child({level: "fatal"}),
                 browser: ["Chrome (Linux)", "", ""]
              });
-             if(!Pair_Code_By_Fredie_Tech.authState.creds.registered) {
+             if(!Pair_Code_By_Njabulo_JB.authState.creds.registered) {
                 await delay(1500);
                         num = num.replace(/[^0-9]/g,'');
-                            const code = await Pair_Code_By_Fredie_Tech.requestPairingCode(num)
+                            const code = await Pair_Code_By_Niabulo_Jb.requestPairingCode(num)
                  if(!res.headersSent){
                  await res.send({code});
                      }
                  }
-            Pair_Code_By_Fredie_Tech.ev.on('creds.update', saveCreds)
-            Pair_Code_By_Fredie_Tech.ev.on("connection.update", async (s) => {
+            Pair_Code_By_Njabulo_Jb.ev.on('creds.update', saveCreds)
+            Pair_Code_By_Njabulo_Jb.ev.on("connection.update", async (s) => {
                 const {
                     connection,
                     lastDisconnect
@@ -54,22 +54,22 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Fredie_Tech.sendMessage(Pair_Code_By_Fredie_Tech.user.id, { text: '' + b64data });
+               let session = await Pair_Code_By_Njabulo_Jb.sendMessage(Pair_Code_By_Njabulo_Jb.user.id, { text: '' + b64data });
 
-               let FREDI_TECH_TEXT = `
+               let NJABULO_JB_TEXT = `
 ✧LUCKY MD DEVICE SUCCESSFUL CONNECTED✧
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🤦  Creator ☞ ✧FREDI EZRA✧
+🤦  Creator ☞ ✧NJABULO JB✧
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🫂  WhattsApp Channel ☞ https://whatsapp.com/channel/0029VasiOoR3bbUw5aV4qB31
+🫂  WhattsApp group ☞ https://chat.whatsapp.com/GfmBCCZR34g5EqMHpFLzZN
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🥂 Contact Owne ☞ https://wa.me/255752593977
+🥂 Contact Owne ☞ https://wa.me/+26777821911
 FREDIETECH
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-> ©*FREDIE TECH 2025 SCRIPT*
+> ©*NJABULO JB 2025 SCRIPT*
 
 _Don't Forget To Give Star To My Repo_`
- await Pair_Code_By_Fredie_Tech.sendMessage(Pair_Code_By_Fredie_Tech.user.id,{text:FREDI_TECH_TEXT},{quoted:session})
+ await Pair_Code_By_Njabulo_Jb.sendMessage(Pair_Code_By_Njabulo_Jb.user.id,{text: NJABULO_JB_TEXT},{quoted:session})
  
 
         await delay(100);
@@ -77,7 +77,7 @@ _Don't Forget To Give Star To My Repo_`
         return await removeFile('./temp/'+id);
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    FREDI_TECH_PAIR_CODE();
+                    NJABULO_Jb_PAIR_CODE();
                 }
             });
         } catch (err) {
@@ -88,6 +88,6 @@ _Don't Forget To Give Star To My Repo_`
          }
         }
     }
-    return await FREDI_TECH_PAIR_CODE()
+    return await NJABULO_JB_PAIR_CODE()
 });
 module.exports = router
