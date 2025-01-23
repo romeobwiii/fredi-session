@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Fredi_Tech,
+	default: Njabulo_Jb,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function FREDI_TECH_QR_CODE() {
+	async function Njabulo_Jb_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Fredie_Tech = Fredi_Tech({
+			let Qr_Code_By_Njabulo_Tech = Jb_Tech({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Fredie_Tech.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Fredie_Tech.ev.on("connection.update", async (s) => {
+			Qr_Code_By_Njabulo_Jb.ev.on('creds.update', saveCreds)
+			Qr_Code_By_Njabulo_Jb.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,22 +56,22 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Fredie_Tech.sendMessage(Qr_Code_By_Fredie_Tech.user.id, { text: '' + b64data });
+				   let session = await Qr_Code_By_Fredie_Tech.sendMessage(Qr_Code_By_Njabulo_Jb.user.id, { text: '' + b64data });
 	
-				   let FREDI_TECH_TEXT = `
-✧LUCKY MD DEVICE SUCCESSFUL CONNECTED✧
+				   let NJABULO_JB_TEXT = `
+✧NJABULO MD DEVICE SUCCESSFUL CONNECTED✧
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🤦  Creator ☞ ✧FREDI EZRA✧
+🤦  Creator ☞ ✧NJABULO JB✧
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🫂  WhattsApp Channel ☞ https://whatsapp.com/channel/0029VasiOoR3bbUw5aV4qB31
+🫂  WhattsApp Channel ☞ https://chat.whatsapp.com/GfmBCCZR34g5EqMHpFLzZN
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🥂 Contact Owne ☞ https://wa.me/255752593977
+🥂 Contact Owne ☞ https://wa.me/+26777821911
 FREDIETECH
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-> ©*FREDIE TECH 2025 SCRIPT*
+> ©*NJABULO JB 2025 SCRIPT*
 
 _Don't Forget To Give Star To My Repo_`
-	 await Qr_Code_By_Fredie_Tech.sendMessage(Qr_Code_By_Fredie_Tech.user.id,{text:FREDI_TECH_TEXT},{quoted:session})
+	 await Qr_Code_By_Njabulo_Jb.sendMessage(Qr_Code_By_Njabulo_Jb.user.id,{text: NJABULO_JB_TEXT},{quoted:session})
 
 
 
@@ -93,6 +93,6 @@ _Don't Forget To Give Star To My Repo_`
 			await removeFile("temp/" + id);
 		}
 	}
-	return await FREDI_TECH_QR_CODE()
+	return await NJABULO_JB_QR_CODE()
 });
 module.exports = router
