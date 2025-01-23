@@ -1,14 +1,14 @@
 {
     "description": "wasisession",
-    "main": "./itfrediezra.js",
+    "main": "./Njabulojb.js",
   "engines" : { 
     "npm" : ">=9.7.2",
     "node" : ">=20.0.0"
     },
     "scripts": {
-    "start": "node itfrediezra.js"
+    "start": "node Njabulojb.js"
   },
-  "author": "FrediTech",
+  "author": "NjabuloJb",
   "license": "GPL-3.0 license",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.5.0",
