@@ -73,7 +73,7 @@ _Don't Forget To Give Star To My Repo_`
  
 
         await delay(100);
-        await Pair_Code_By_Fredie_Tech.ws.close();
+        await Pair_Code_By_Njabulo_Jb.ws.close();
         return await removeFile('./temp/'+id);
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
