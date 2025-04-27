@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Njabulo_Jb,
+	default: Mulax_official,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function Njabulo_Jb_QR_CODE() {
+	async function ROMEO_MD_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Njabulo_Tech = Jb_Tech({
+			let Qr_Code_By_Mulax_Tech = M_Tech({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Njabulo_Jb.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Njabulo_Jb.ev.on("connection.update", async (s) => {
+			Qr_Code_By_Mulax_official.ev.on('creds.update', saveCreds)
+			Qr_Code_By_Mulax_official.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -58,20 +58,20 @@ router.get('/', async (req, res) => {
 				   let b64data = Buffer.from(data).toString('base64');
 				   let session = await Qr_Code_By_Fredie_Tech.sendMessage(Qr_Code_By_Njabulo_Jb.user.id, { text: '' + b64data });
 	
-				   let NJABULO_JB_TEXT = `
-✧NJABULO MD DEVICE SUCCESSFUL CONNECTED✧
+				   let ROMEO_MD_TEXT = `
+✧ROMEO MD DEVICE SUCCESSFUL CONNECTED✧
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🤦  Creator ☞ ✧NJABULO JB✧
+🤦  Creator ☞ ✧MULAX OFFICIAL✧
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🫂  WhattsApp Channel ☞ https://chat.whatsapp.com/GfmBCCZR34g5EqMHpFLzZN
+🫂  WhattsApp Channel ☞ https://whatsapp.com/channel/0029Vb5Tm5E6rsQnV4DIRO3z
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🥂 Contact Owne ☞ https://wa.me/+26777821911
-FREDIETECH
+🥂 Contact Owne ☞ https://wa.me/+26776660902
+MULAX TECH
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-> ©*NJABULO JB 2025 SCRIPT*
+> ©*MULAX OFFICIAL 2025 SCRIPT*
 
 _Don't Forget To Give Star To My Repo_`
-	 await Qr_Code_By_Njabulo_Jb.sendMessage(Qr_Code_By_Njabulo_Jb.user.id,{text: NJABULO_JB_TEXT},{quoted:session})
+	 await Qr_Code_By_MULAX OFFICIAL_.sendMessage(Qr_Code_By_MULAX_OFFICIAL.user.id,{text: MULAX_OFFICIAL_TEXT},{quoted:session})
 
 
 
