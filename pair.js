@@ -20,13 +20,13 @@ function removeFile(FilePath){
 router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
-        async function NJABULO_Jb_PAIR_CODE() {
+        async function ROMEO_MD_PAIR_CODE() {
         const {
             state,
             saveCreds
         } = await useMultiFileAuthState('./temp/'+id)
      try {
-            let Pair_Code_By_Njabulo_Tech = Njabulo_Tech({
+            let Pair_Code_By_MULAX_Tech = MULAX_Tech({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
@@ -35,7 +35,7 @@ router.get('/', async (req, res) => {
                 logger: pino({level: "fatal"}).child({level: "fatal"}),
                 browser: ["Chrome (Linux)", "", ""]
              });
-             if(!Pair_Code_By_Njabulo_JB.authState.creds.registered) {
+             if(!Pair_Code_By_MULAX_OFFICIAL.authState.creds.registered) {
                 await delay(1500);
                         num = num.replace(/[^0-9]/g,'');
                             const code = await Pair_Code_By_Niabulo_Jb.requestPairingCode(num)
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
                  await res.send({code});
                      }
                  }
-            Pair_Code_By_Njabulo_Jb.ev.on('creds.update', saveCreds)
-            Pair_Code_By_Njabulo_Jb.ev.on("connection.update", async (s) => {
+            Pair_Code_By_MULAX_OFFICIAL.ev.on('creds.update', saveCreds)
+            Pair_Code_By_MULAX_OFFICIAL.ev.on("connection.update", async (s) => {
                 const {
                     connection,
                     lastDisconnect
@@ -56,17 +56,17 @@ router.get('/', async (req, res) => {
                let b64data = Buffer.from(data).toString('base64');
                let session = await Pair_Code_By_Njabulo_Jb.sendMessage(Pair_Code_By_Njabulo_Jb.user.id, { text: '' + b64data });
 
-               let NJABULO_JB_TEXT = `
-✧LUCKY MD DEVICE SUCCESSFUL CONNECTED✧
+               let ROMEO MD = `
+✧ROMEO MD DEVICE SUCCESSFUL CONNECTED✧
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🤦  Creator ☞ ✧NJABULO JB✧
+🤦  Creator ☞ ✧MULAX OFFICIAL✧
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🫂  WhattsApp group ☞ https://chat.whatsapp.com/GfmBCCZR34g5EqMHpFLzZN
+🫂  WhattsApp group ☞ https://whatsapp.com/channel/0029Vb5Tm5E6rsQnV4DIRO3z
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-🥂 Contact Owne ☞ https://wa.me/+26777821911
+🥂 Contact Owne ☞ https://wa.me/+26776660902
 FREDIETECH
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-> ©*NJABULO JB 2025 SCRIPT*
+> ©*ROMEO MD 2025 SCRIPT*
 
 _Don't Forget To Give Star To My Repo_`
  await Pair_Code_By_Njabulo_Jb.sendMessage(Pair_Code_By_Njabulo_Jb.user.id,{text: NJABULO_JB_TEXT},{quoted:session})
